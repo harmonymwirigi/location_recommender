@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Website Title -->
+    <title>Saudi Reference Travel and Tour | HOME</title>
+
+    <!-- <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <meta name="author" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="nositelinkssearchbox" /> -->
+
+    <link
+      rel="shortcut icon"
+      href="/static/assets/default-favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <!-- Preconnecting can help reduce the latency when actual requests are made to this domain, such as when fetching font resources. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <!---------- Header----------->
+    <header>
+      <div>
+        <a href="">
+          <img src="/static/assets/logo.png" class="header-logo" alt=""
+        /></a>
+
+        <nav>
+          <a href="{{url_for('index')}}">Home</a>
+          <a href="#">About </a>
+          <a href="#">Contact</a>
+        </nav>
+        <div>
+          <a href="">
+            <span><i class="fas fa-user"></i></span>
+            <p>Log In</p></a
+          >
+        </div>
+      </div>
+    </header>
+    <!--  -->
+    <section>
+      <div class="home-hero-section">
+        <div class="home-hero-section-content">
+          <div class="home-hero-section-heading">wherever you wish to go!</div>
+          <hr />
+          <div class="home-hero-section-search">
+            <input type="text"  placeholder="where would you like to visit?" />
+            <script>
+              function askForLocation() {
+                var response = confirm("Can we access your location to provide accurate results?");
+        
+                if (response) {
+                  getLocation();
+                } else {
+                  location.href = "{{url_for('index')}}";
+                }
+              }
+        
+              function getLocation() {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                  alert("Geolocation is not supported by this browser.");
+                }
+              }
+        
+              function showPosition(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+        
+              }
+        
+              askForLocation();
+            </script>
+
+            <a href="D:\TryDatasetForGP\Saudi Reference Site Updated\template\page3.html"
+              ><span> <i class="far fa-search"></i></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/static/assets/tatic/app.js"></script>
+  </body>
+</html>
